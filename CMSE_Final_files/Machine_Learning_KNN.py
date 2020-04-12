@@ -2,9 +2,9 @@ import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
 import matplotlib.pyplot as plt
-from data_notebook_test import create_data
-from test12 import return_sentiment
-from test1 import return_sentiment2
+from control_variables import create_data
+from data_12_16 import return_sentiment
+from data_00_08 import return_sentiment2
 from sklearn.neighbors import KNeighborsClassifier  
 from scipy.spatial.distance import euclidean
 from scipy.stats import mode

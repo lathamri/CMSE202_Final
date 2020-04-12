@@ -116,4 +116,7 @@ def predict(k,size,x_input=[]):
         classifier = KNeighborsClassifier(n_neighbors = k, weights = 'distance')
         classifier.fit(x_train,y_train)
         y_pred = classifier.predict(x_input)
-    return y_pred
+        accuracy = accuracy_score(y_pred,y_test)
+    return y_pred, accuracy,y_test
+
+    

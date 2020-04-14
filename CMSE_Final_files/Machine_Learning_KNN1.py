@@ -110,13 +110,14 @@ def predict(k,size,x_input=[]):
         classifier = KNeighborsClassifier(n_neighbors = k, weights = 'distance')
         classifier.fit(x_train,y_train)
         y_pred = classifier.predict(x_test)
+        accuracy = accuracy_score(y_pred,y_test)
+        return y_pred, accuracy, y_test
     else:
         x_train = scaler.transform(x_train)
         x_input = scaler.transform(x_input)
         classifier = KNeighborsClassifier(n_neighbors = k, weights = 'distance')
         classifier.fit(x_train,y_train)
         y_pred = classifier.predict(x_input)
-        accuracy = accuracy_score(y_pred,y_test)
-    return y_pred, accuracy,y_test
+        return y_pred, x_input
 
     

@@ -112,7 +112,7 @@ def predict(k,size,x_input=[]):
         classifier.fit(x_t1,y_train)
         y_pred = classifier.predict(x_t2)
         accuracy = accuracy_score(y_pred,y_test)
-        return y_pred, accuracy, y_test, x_train, x_test, win_data, totals
+        return y_pred, accuracy, y_test, y_train, x_train, x_test, win_data, totals
     else:
         x_train = scaler.transform(x_train)
         x_input = scaler.transform(x_input)
